@@ -1,0 +1,141 @@
+<html>
+<head>
+    <title>Contact Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #c22929;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .topnav{
+                background-color: #333;
+                overflow: hidden;
+        }
+        .topnav a{
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+            .topnav a:hover{
+                background-color: #ddd;
+                color:black;
+            }
+            .topnav a.active{
+                background-color: #04AA6D;
+                color:white;
+            }
+            .topnav{
+                position:absolute;
+                top:0;
+            }
+            .header1 {
+                background-color: #333;
+                color: #fff;
+                padding: 10px 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 300px;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+            }
+            .logout-btn {
+                background-color: #d9534f;
+                color: #fff;
+                border: none;
+                padding: 8px 16px;
+                border-radius: 4px;
+                width: 100px;
+                cursor: pointer;
+            }
+    </style>
+</head>
+<body>
+    <div class="header1">
+        <div id="welcomeMessage"></div>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <script>
+        var userName = "John Doe"; 
+        function displayWelcomeMessage() {
+          document.getElementById("welcomeMessage").innerHTML = "Welcome, " + userName + "!";
+        }
+    
+        function logout() {
+          
+          alert("Logged out successfully!"); 
+        }
+
+        window.onload = displayWelcomeMessage;
+      </script>
+
+    <header>
+        <h1>Contact Me</h1>
+    </header>
+    <div class="container">
+        <form action="mailto:ali.haidar20@lau.edu" method="post" enctype="text/plain">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <input type="submit" value="Send">
+        </form>
+    </div>
+    <div class="topnav">
+        <a href="file:///C:/Users/aliha/OneDrive/Desktop/Uni/Fall%202023/Web%20Programming/Home.html">Home</a>
+        <a href="file:///C:/Users/aliha/OneDrive/Desktop/Uni/Fall%202023/Web%20Programming/test1.html">CV</a>
+        <a href="file:///C:/Users/aliha/OneDrive/Desktop/Uni/Fall%202023/Web%20Programming/Gallery.html">Gallery</a>
+        <a class="active" href="file:///C:/Users/aliha/OneDrive/Desktop/Uni/Fall%202023/Web%20Programming/Contact-Me.html">Contact Me</a>
+    </div>
+</body>
+</html>
